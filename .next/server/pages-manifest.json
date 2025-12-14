@@ -2,10 +2,9 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/commentadmin": "pages/commentadmin.js",
-  "/blog": "pages/blog.js",
-  "/api/projects": "pages/api/projects.js",
   "/api/comments": "pages/api/comments.js",
+  "/": "pages/index.js",
   "/api/blogs": "pages/api/blogs.js",
-  "/": "pages/index.js"
+  "/mdfsadmin": "pages/mdfsadmin.js",
+  "/api/projects": "pages/api/projects.js"
 }
