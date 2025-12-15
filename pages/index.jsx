@@ -471,7 +471,7 @@ export default function Home() {
           onClick={() => setPreview(null)}
         >
           <div
-            className="bg-slate-900 border border-white/20 rounded-3xl p-6 max-w-2xl w-full relative shadow-2xl"
+            className="bg-slate-900 border border-white/20 rounded-2xl p-5 max-w-xl w-full max-h-[85vh] overflow-y-auto relative shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <button
