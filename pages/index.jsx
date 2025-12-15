@@ -466,21 +466,76 @@ export default function Home() {
 
       {/* MODAL PREVIEW */}
       {preview && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 z-50 animate-in fade-in duration-200" onClick={() => setPreview(null)}>
-          <div className="bg-slate-900 border border-white/20 rounded-3xl p-6 max-w-2xl w-full relative shadow-2xl" onClick={e => e.stopPropagation()}>
-            <button onClick={() => setPreview(null)} className="absolute top-4 right-4 p-2 bg-black/50 rounded-full text-white hover:bg-red-500/80 transition">
+        <div
+          className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 z-50 animate-in fade-in duration-200"
+          onClick={() => setPreview(null)}
+        >
+          <div
+            className="bg-slate-900 border border-white/20 rounded-3xl p-6 max-w-2xl w-full relative shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setPreview(null)}
+              className="absolute top-4 right-4 p-2 bg-black/50 rounded-full text-white hover:bg-red-500/80 transition"
+            >
               <X className="w-5 h-5" />
             </button>
-            <img src={preview.gambar || '/placeholder.png'} className="w-full h-64 object-cover rounded-2xl mb-6 border border-white/10" alt={preview.nama}/>
-            <h3 className="text-3xl font-bold text-white mb-2">{preview.nama}</h3>
-            <div className="flex gap-2 mb-4">
-              {preview.teknologi && preview.teknologi.split(',').map((t, i) => (
-                <span key={i} className="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded border border-blue-500/30">{t.trim()}</span>
-              ))}
+
+            <img
+              src={preview.gambar || "/placeholder.png"}
+              className="w-full h-64 object-cover rounded-2xl mb-6 border border-white/10"
+              alt={preview.nama}
+            />
+
+            <h3 className="text-3xl font-bold text-white mb-2">
+              {preview.nama}
+            </h3>
+
+            {/* Teknologi */}
+            <div className="flex flex-wrap gap-2 mb-4">
+              {preview.teknologi &&
+                preview.teknologi.split(",").map((t, i) => (
+                  <span
+                    key={i}
+                    className="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded border border-blue-500/30"
+                  >
+                    {t.trim()}
+                  </span>
+                ))}
             </div>
-            <p className="text-slate-300 leading-relaxed">{preview.deskripsi}</p>
-            <div className="mt-8 flex justify-end gap-3">
-              <button onClick={() => setPreview(null)} className="px-5 py-2 rounded-xl text-slate-300 hover:bg-white/5 transition">Tutup</button>
+
+            {/* Deskripsi */}
+            <p className="text-slate-300 leading-relaxed mb-6">
+              {preview.deskripsi}
+            </p>
+
+            {/* FITUR PROJECT */}
+            {preview.fitur && (
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold text-white mb-3">
+                  Fitur Utama
+                </h4>
+                <ul className="grid sm:grid-cols-2 gap-2 text-slate-300 text-sm">
+                  {(Array.isArray(preview.fitur)
+                    ? preview.fitur
+                    : preview.fitur.split(",")
+                  ).map((f, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <span className="text-blue-400">•</span>
+                      <span>{f.trim()}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            <div className="flex justify-end gap-3">
+              <button
+                onClick={() => setPreview(null)}
+                className="px-5 py-2 rounded-xl text-slate-300 hover:bg-white/5 transition"
+              >
+                Tutup
+              </button>
             </div>
           </div>
         </div>
