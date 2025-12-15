@@ -515,16 +515,18 @@ export default function Home() {
                 <h4 className="text-lg font-semibold text-white mb-3">
                   Fitur Utama
                 </h4>
-                <ul className="grid sm:grid-cols-2 gap-2 text-slate-300 text-sm">
-                  {(Array.isArray(preview.fitur)
-                    ? preview.fitur
-                    : preview.fitur.split(",")
-                  ).map((f, i) => (
-                    <li key={i} className="flex items-start gap-2">
-                      <span className="text-blue-400">•</span>
-                      <span>{f.trim()}</span>
-                    </li>
-                  ))}
+
+                <ul className="space-y-2 text-slate-300 text-sm">
+                  {preview.fitur
+                    .split(",")                 // pisah berdasarkan koma
+                    .map(f => f.trim())         // hapus spasi
+                    .filter(f => f.length > 0)  // buang item kosong
+                    .map((f, i) => (
+                      <li key={i} className="flex gap-2">
+                        <span className="text-blue-400">•</span>
+                        <span>{f}</span>
+                      </li>
+                    ))}
                 </ul>
               </div>
             )}
