@@ -153,7 +153,7 @@ export default function Home() {
               className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl font-semibold shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-105 transition-all duration-300">
               Lihat Karya Saya
             </button>
-            <a href="/CVKU.pdf" download
+            <a href="/CV Moch Dani Fedian Saputra1.pdf" download
               className="px-8 py-4 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl font-medium hover:bg-white/10 hover:border-white/30 transition-all duration-300 flex items-center gap-2">
               <Download className="w-5 h-5" /> Download CV
             </a>
