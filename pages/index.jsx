@@ -18,12 +18,40 @@ export default function Home() {
 
   // --- DATA STATIS ---
   const collaborationData = [
-    { title: "Intern Full Stack Developer PEMKAB BOJONEGORO", year: "2025", desc: "Mengembangkan sitem alih media arsip PEMKAB Bojonegoro" },
-    { title: "Freelance Full Stack Kelurahan Krembangan Selatan Surabaya", year: "2025", desc: "Desain dan implementasi website portal UMKM" },
-  ];
+  {
+    title: "Intern Full Stack Developer PEMKAB BOJONEGORO",
+    year: "2025",
+    desc: "Mengembangkan sistem alih media arsip PEMKAB Bojonegoro",
+  },
+  {
+    title: "Freelance Full Stack Kelurahan Krembangan Selatan Surabaya",
+    year: "2025",
+    desc: "Desain dan implementasi website portal UMKM",
+  },
+  {
+    title: "Ketua Pelaksana Kegiatan Abdi Desa",
+    year: "2023",
+    desc: "BEM Fakultas — Mengoordinasikan persiapan hingga pelaksanaan kegiatan pengabdian masyarakat, termasuk pembagian tugas panitia dan koordinasi dengan pihak terkait.",
+  },
+  {
+    title: "Koordinator Senior Pendamping PKKMB Fakultas",
+    year: "2023",
+    desc: "BEM Fakultas — Mengoordinasikan para pendamping sekaligus mendampingi mahasiswa baru untuk mendukung kelancaran dan ketertiban kegiatan PKKMB tingkat fakultas.",
+  },
+  {
+    title: "Koordinator Perlombaan Basket Fasilkom Fest",
+    year: "2024",
+    desc: "BEM Fakultas — Mengoordinasikan teknis pertandingan basket ant jurusan, pengaturan jadwal, serta koordinasi panitia agar perlombaan berjalan lancar.",
+  },
+  {
+    title: "Koordinator Acara Kegiatan KKN",
+    year: "2025",
+    desc: "Universitas — Menyusun susunan acara serta mengoordinasikan anggota kelompok dan pihak terkait dalam persiapan hingga pelaksanaan kegiatan KKN.",
+  },
+];
 
   const educationData = [
-    { title: "S1 Teknik Informatika - UPN Veteran Jawa Timur", year: "2022-Sekarang", desc: "Konsentrasi pada sistem informasi dan pengembangan web." },
+    { title: "S1 Teknik Informatika - UPN Veteran Jawa Timur", year: "2022-2026", desc: "Konsentrasi pada sistem informasi dan pengembangan web." },
     { title: "Bootcamp Data Analis - RevoU", year: "2024", desc: "Data Analis & Machine Learning" },
   ];
 
@@ -58,6 +86,7 @@ export default function Home() {
       { name: "Postman", logo: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" },
       { name: "Figma", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
       { name: "PowerBI", logo: "https://cdn.worldvectorlogo.com/logos/power-bi.svg" },
+      { name: "Microsoft Office", logo: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Microsoft_365_%282022%29.svg" },
       { name: "Google Colab", logo: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Colaboratory_SVG_Logo.svg" },
       { name: "Jupyter", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" },
       { name: "BigQuery", logo: "https://www.vectorlogo.zone/logos/google_bigquery/google_bigquery-icon.svg" },
@@ -153,7 +182,7 @@ export default function Home() {
               className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl font-semibold shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-105 transition-all duration-300">
               Lihat Karya Saya
             </button>
-            <a href="/CV Moch Dani Fedian Saputra1.pdf" download
+            <a href="/CVKU_FIX.pdf" download
               className="px-8 py-4 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl font-medium hover:bg-white/10 hover:border-white/30 transition-all duration-300 flex items-center gap-2">
               <Download className="w-5 h-5" /> Download CV
             </a>
